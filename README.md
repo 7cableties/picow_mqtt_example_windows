@@ -40,28 +40,34 @@ It should be noted that it is not recommended to leave this rule enabled. It is 
 
 This step may not be required if usernames and passwords are set up for the mosquitto broker.
 
-### Create a new Inbound Rule
+### 1. Create a new Inbound Rule
 
-![Windows Defender Firewall - Inbound Rule](image.png)
+![Windows Defender Firewall - Inbound Rule](images/WindowsDefender1.png)
 
-### Select "Port"
+### 2. Select "Port"
 
-![alt text](image-2.png)
+![Windows Defender Firewall - Select Port](images/WindowsDefender3.png)
 
-### TCP and Specific Port 1883
+### 3. TCP and Specific Port 1883
 
 Another port may be specified, but make sure it is consistent with the mosquitto.conf file.
 
-![alt text](image-3.png)
+![Specify Port 1883](images/WindowsDefender4.png)
 
-### Allow the connection
+### 4. Allow the connection
 
-![alt text](image-4.png)
+Allow _all_ connections.
 
-### This rule applies on all networks ()
+![Allow all connections](images/WindowsDefender5.png)
 
-![alt text](image-5.png)
+### 5. This rule applies on all networks
 
-### Give the rule a name
+Didn't work for me without selecting all networks
 
-![alt text](image-6.png)
+![All networks](images/WindowsDefender6.png)
+
+### 6. Give the rule a name
+
+Again, make sure the port is consistent with whatever you specified previously in step 3 (and whichever port specified in the mosquitto.conf).
+
+![Name MQTT 1883](images/WindowsDefender7.png)
